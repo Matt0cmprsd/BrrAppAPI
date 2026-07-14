@@ -1,8 +1,12 @@
 {
-  "artiste": "Mouvset"
-  "projet": "???"
-  "dds": "??/??/202?"
-  "nbsons": "??"
-  "durée": "??:??"
-  "show": true
+  "projects": [
+    {
+      "artiste": "Mouvset",
+      "projet": "???",
+      "dds": "??/??/202?",
+      "nbsons": "??",
+      "durée": "??:??",
+      "show": true
+    }
+  ]
 }

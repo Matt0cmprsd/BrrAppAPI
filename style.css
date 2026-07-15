@@ -1,0 +1,111 @@
+body{
+
+    margin:0;
+
+    background:#242222;
+
+    font-family:Arial;
+
+    text-align:center;
+
+    color:#D80F1B;
+
+}
+
+#logo{
+
+    width:180px;
+
+    margin-top:50px;
+
+}
+
+h1{
+
+    font-size:60px;
+
+    margin-bottom:10px;
+
+}
+
+#description{
+
+    color:white;
+
+    width:700px;
+
+    margin:auto;
+
+    margin-top:25px;
+
+    line-height:30px;
+
+    font-size:20px;
+
+}
+
+.download-panel{
+
+    width:900px;
+
+    height:90px;
+
+    background:#413F3F;
+
+    margin:auto;
+
+    margin-top:60px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding-left:35px;
+
+    padding-right:35px;
+
+    box-sizing:border-box;
+
+}
+
+.download-text{
+
+    color:white;
+
+    font-size:24px;
+
+}
+
+#version{
+
+    color:#D80F1B;
+
+}
+
+#download{
+
+    background:#D80F1B;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px 40px;
+
+    border-radius:15px;
+
+    font-weight:bold;
+
+    transition:.2s;
+
+}
+
+#download:hover{
+
+    transform:scale(1.05);
+
+}

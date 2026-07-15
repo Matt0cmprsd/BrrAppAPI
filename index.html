@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BrrApp</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img id="logo" src="BrrApp.png">
+
+    <h1>BrrApp</h1>
+
+    <p id="description">
+        BrrApp est un lecteur de musique moderne permettant
+        d'organiser facilement votre bibliothèque,
+        d'afficher les paroles, de découvrir les projets à venir
+        et bien plus encore.
+    </p>
+
+    <div class="download-panel">
+
+        <div class="download-text">
+            Télécharger la dernière version de BrrApp
+            <span id="version">(chargement...)</span>
+        </div>
+
+        <a id="download" href="#">
+            DOWNLOAD
+        </a>
+
+    </div>
+
+<script>
+
+fetch("api.json")
+.then(response => response.json())
+.then(api => {
+
+    document.getElementById("version").innerHTML =
+        "(" + api.version + ")";
+
+    document.getElementById("download").href =
+        api.download;
+
+});
+
+</script>
+
+</body>
+</html>

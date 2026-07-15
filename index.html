@@ -32,19 +32,22 @@
     </div>
 
 <script>
-
 fetch("api.json")
 .then(response => response.json())
 .then(api => {
 
-    document.getElementById("version").innerHTML =
+    console.log(api);
+
+    document.getElementById("version").textContent =
         "(" + api.version + ")";
 
     document.getElementById("download").href =
         api.download;
 
-});
+    console.log(document.getElementById("download").href);
 
+})
+.catch(err => console.error(err));
 </script>
 
 </body>

@@ -13,11 +13,10 @@ body{
 }
 
 #logo{
-
-    width:500px;
-
+    width:180px;
     margin-top:50px;
-
+    opacity: 1;
+    filter: none;
 }
 
 #description{

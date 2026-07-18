@@ -1,12 +1,12 @@
 {
   "projects": [
     {
-      "artiste": "0D101D38",
-      "projet": "7D4D4D",
-      "dds": "7D4D5D7E4F5F6D02020D",
-      "nbsons": "7D4D",
-      "durée": "7D4D487E4F",
-      "show": true
+      "artiste": "",
+      "projet": "",
+      "dds": "",
+      "nbsons": "",
+      "durée": "",
+      "show": false
     }
   ]
 }

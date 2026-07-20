@@ -1,7 +1,18 @@
 {
+  "id": "sondage_001",
   "question": "011D1F2C151E2B124440592A330B2A45020E0717621E13611C57365C44574439240D35",
   "reponse_un": "0F1D112915",
   "reponse_deux": "001D14",
   "reponse_trois": "011D003315132B",
-  "reponse_quatre": "1107022402123A1211"
+  "reponse_quatre": "1107022402123A1211",
+
+  "votes": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+
+  "fin": "2026-08-01 23:59:59",
+  "result_sent": false
 }

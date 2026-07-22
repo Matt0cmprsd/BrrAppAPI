@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrrApp — Télécharger</title>
+    <link rel="icon" type="image/png" href="LilSinicsLogo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="nav-brand" href="index.html">
+            <img src="LilSinicsLogo.png" alt="">
+            BrrApp
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="telechargement.html" class="active">Télécharger</a>
+        </div>
+    </nav>
+
+    <h2 class="page-title">Télécharger BrrApp</h2>
+    <p class="page-subtitle">Dernière version disponible, mise à jour automatiquement</p>
+
+    <div class="download-panel">
+        <div class="download-text">
+            Dernière version de BrrApp <span id="version"></span>
+        </div>
+        <a id="download" href="https://www.mediafire.com/file/cti5y7bhvfpzk8s/BrrApp3.3.zip/file" target="_blank">
+            DOWNLOAD
+        </a>
+    </div>
+
+    <div class="info-row">
+        <div class="info-card">
+            <div class="label">Taille</div>
+            <div class="value" id="taille">—</div>
+        </div>
+        <div class="info-card">
+            <div class="label">Disponible sur</div>
+            <div class="value" id="dispo">—</div>
+        </div>
+    </div>
+
+<script>
+fetch("api.json")
+.then(response => response.json())
+.then(api => {
+    document.getElementById("version").textContent =
+        "(" + api.version + ")";
+    document.getElementById("download").href = api.download;
+    document.getElementById("taille").textContent = api.taille || "—";
+    document.getElementById("dispo").textContent = api.dispo || "—";
+})
+.catch(err => console.error(err));
+</script>
+</body>
+</html>

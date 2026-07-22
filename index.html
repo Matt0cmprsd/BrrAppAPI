@@ -2,35 +2,68 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BrrApp</title>
     <link rel="icon" type="image/png" href="LilSinicsLogo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav class="navbar">
+        <a class="nav-brand" href="index.html">
+            <img src="LilSinicsLogo.png" alt="">
+            BrrApp
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="telechargement.html">Télécharger</a>
+        </div>
+    </nav>
+
     <img id="logo" src="TextBrrApp.png">
     <p id="description">
-        BrrApp est une application de musique local ou on peut ajouter nos artistes préférés ainsi que leurs projets ou singles.
+        BrrApp est une application de musique locale où on peut ajouter nos artistes préférés ainsi que leurs projets ou singles.
     </p>
-    <div class="download-panel">
-        <div class="download-text">
-            Télécharger la dernière version de BrrApp <span id="version"></span>
-        </div>
-        <a id="download" href="https://www.mediafire.com/file/cti5y7bhvfpzk8s/BrrApp3.3.zip/file" target="_blank">
-            DOWNLOAD
-        </a>
+
+    <h2 class="page-title">Quoi de neuf</h2>
+    <p class="page-subtitle">Les derniers ajouts et correctifs de BrrApp</p>
+
+    <div class="board" id="news-board">
+        <div class="board-empty">Chargement de la news...</div>
     </div>
+
 <script>
-fetch("api.json")
+fetch("news.json")
 .then(response => response.json())
-.then(api => {
-    console.log(api);
-    document.getElementById("version").textContent =
-        "(" + api.version + ")";
-    document.getElementById("download").href =
-        api.download;
-    console.log(document.getElementById("download").href);
+.then(item => {
+    const board = document.getElementById("news-board");
+
+    if (!item || !item.titre) {
+        board.innerHTML = '<div class="board-empty">Aucune news pour le moment.</div>';
+        return;
+    }
+
+    board.innerHTML = `
+        <div class="news-item">
+            <div class="news-pin"></div>
+            <div class="news-body">
+                <div class="news-head">
+                    <div class="news-title"></div>
+                    <div class="news-date"></div>
+                </div>
+                <div class="news-desc"></div>
+            </div>
+        </div>
+    `;
+    board.querySelector(".news-title").textContent = item.titre || "";
+    board.querySelector(".news-date").textContent = item.date || "";
+    board.querySelector(".news-desc").textContent = item.desc || "";
 })
-.catch(err => console.error(err));
+.catch(err => {
+    document.getElementById("news-board").innerHTML =
+        '<div class="board-empty">Impossible de charger la news.</div>';
+    console.error(err);
+});
 </script>
 </body>
 </html>

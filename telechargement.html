@@ -49,7 +49,6 @@ fetch("api.json")
 .then(api => {
     document.getElementById("version").textContent =
         "(" + api.version + ")";
-    document.getElementById("download").href = api.download;
     document.getElementById("taille").textContent = api.taille || "—";
     document.getElementById("dispo").textContent = api.dispo || "—";
 })

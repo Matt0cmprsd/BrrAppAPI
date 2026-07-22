@@ -1,19 +1,11 @@
 {
   "projects": [
     {
-      "artiste": "0A523824051E3A7142535534",
-      "projet": "71B1DA2C1550125D45445332200024",
-      "dds": "7D4D5D7E4F5F6D020205",
-      "nbsons": "7A",
-      "durée": "7042",
-      "show": true
-    },
-    {
-      "artiste": "0D101D38",
-      "projet": "0D1E0B22190426",
-      "dds": "724B5D71495F6D020204",
-      "nbsons": "7346",
-      "durée": "7745",
+      "artiste": "",
+      "projet": "",
+      "dds": "",
+      "nbsons": "",
+      "durée": "",
       "show": true
     }
   ],
